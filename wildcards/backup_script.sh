@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#backup all .pdf files from prod location: /home/richard/bash/wildcards/prod to backup destination.
+#backup all .pdf files from prod location: /home/leaf/Desktop/Linux-Bash-Shell-Scripting-Complete-Guide/wildcards/prod to backup destination.
 #Script takes one argument:
-#destination path - which needs to ends with /backup e.g. /home/richard/bash/wildcards/backup
+#destination path - which needs to ends with /backup e.g. /home/leaf/Desktop/Linux-Bash-Shell-Scripting-Complete-Guide/wildcards/prod/backup
 
 PROD=/home/leaf/Desktop/Linux-Bash-Shell-Scripting-Complete-Guide/wildcards/prod
 
@@ -24,7 +24,7 @@ DATE=$(date +%Y-%m-%d_%H_%M_%S)
 mkdir -p $DESTINATION/$DATE
 
 #copy from prod to destination
-cp $PROD/*.pdf $DESTINATION/$DATE
+cp $PROD/*.txt $DESTINATION/$DATE
 
 #test exit status of copy command
 if [ $? -eq 0 ]; then
