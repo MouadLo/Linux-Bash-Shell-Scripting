@@ -1,0 +1,15 @@
+ls 1>output.txt
+ls 2>error.txt
+ls %  2>error.txt
+ls % &>both.txt
+ls % 1>output.txt 2>error.txt 
+ls % 1>output.txt 2>&1
+
+
+wc -l >file1.txt
+cat file1.txt | wc -l
+cat file1.txt | head -5 
+
+cat file1.txt | head -5 | tail -2
+
+cat file1.txt | head -5 | tail -2 | wc -l > howmany.txt

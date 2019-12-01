@@ -1,0 +1,27 @@
+
+
+# create 30 .txt and .img files
+for i in {1..30}; do touch file$i.img; done
+
+# list 1-9 for  .txt 
+ls file[1-9].txt
+
+# list 1-9 for both .txt and .img
+ls file[1-9].{txt,img}
+
+# list 5-15 of .txt
+ls file{[5-9],[1][0-5]}.txt
+
+# list all .img files
+ls *.img
+
+
+# delete 13-21 if img
+rm file{[1][3-9],[2][0-1]}.img
+
+# list all files; wich has 3 characters long extension starting with t
+ls *.t??
+
+
+# list all files; wich has 3 characters long extension starting with i
+ls *.i??
